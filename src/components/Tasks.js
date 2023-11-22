@@ -1,14 +1,12 @@
 import Task from "./Task";
-import Button from "./Button";
 
-
-function Tasks({tasks}) {
+function Tasks({tasks, onDelete, onDoubleClick}) {
 
     return (
         <div className="">
             {tasks.map(task => {
                 return (
-                    <Task key={task.id} task={task}/>
+                    <Task key={task.id} task={task} onDelete={onDelete} onDoubleClick={onDoubleClick}/>
                 )
             })}
         </div>
